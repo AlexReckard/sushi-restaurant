@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Maki Magic Sushi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet"
+       type="text/css" />
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+  </head>
+  <body>
+
+    <nav>
+      <a class="logo-mobile" href="#"><img src="../assets/logo.png" alt=""></a>
+       <div class="ham">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+       </div>
+
+       <ul class="nav-links">
+    
+          <li><a href="#book-form" target="_self" title="book">Book</a></li>
+          <li><a href="#" title="menu">Menu</a></li>
+          <li><a href="#" title="order">Order Online</a></li>
+          <a class="logo-main" href="#"><img src="../assets/logo.png" alt=""></a>
+          <li><a href="#" title="gallery">Gallery</a></li>
+          <li><a href="#" title="about">About Us</a></li>
+          <li><a href="#contact" target="_self" title="contact">Contact Us</a></li>
+
+       </ul>
+       <!-- figure out how to put a order online button in left -->
+      <!-- add social in nav  -->
+       
+    </nav>
+
+    <!-- nav container end -->
+    <!-- carousel -->
+        <div class="image-wrap">
+          <div class="image fade-img"><img src="assets/sushi.jpg" class="sushi1" alt=""></div>
+          <div class="image fade-img"><img src="assets/2.jpg" class="sushi2" alt=""></div>
+          <div class="image fade-img"><img src="assets/3.jpg" class="sushi3" alt=""></div>
+          <div class="dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+           </div>
+           
+        <a class="prev" onclick="show_image(-1)">&#10094;</a>
+        <a class="next" onclick="show_image(1)">&#10095;</a>
+        </div>
+
+    <div class="footer-ext">
+      <div class="find-us" id="contact">
+          <div class="title-line"></div>
+        <div class="accordion"><h2 class="panel-title">Find Us</h2></div>
+          <div class="panel">
+            <div class="panel-text">
+
+                <p class="find-us-text">Address</p>
+                <p class="find-us-text">18004206969<br>restaurant reservations</p>
+                <p class="find-us-text">restaurant@feedme.com</p>
+
+            </div>
+          </div>
+      </div>
+
+    <div class="opening-times">
+        <div class="title-line"></div>
+      <div class="accordion"><h2 class="panel-title">Opening Times</h2></div>
+        <div class="panel">
+          <div class="panel-text">
+            <h5>Monday - Wednesday</h5><p class="time-text">12pm - 12am</p>
+            <h5>Thursday - Saturday</h5><p class="time-text">12pm - 3am</p>
+            <h5>Sunday</h5><p class="time-text">12pm - 11pm</p>
+          </div>
+        </div>
+    </div>
+      
+
+        <div class="restaurant-info">
+          <div class="title-line"></div>
+            <div class="accordion"><h2 class="panel-title">Restaurant Info</h2> </div>
+              <div class="panel">
+                <div class="panel-text">
+                  <p class="info-text">Casual</p>
+                  <p class="info-text">No smoking allowed</p>
+                  <p class="info-text">Guide dogs and small dogs are welcome</p>
+                  <p class="info-text">Payment by credit / debit card</p>
+                </div>
+              </div>
+        </div>
+
+
+        <div class="book-table">
+            <div class="title-line"></div>
+          <div class="accordion"><h2 class="panel-title">Reservations</h2></div>
+            <div class="panel">
+              <div class="book-table-form">
+                <form action="/" method="GET" id="book-form">
+                  <input type="date" id="date-picker">
+                  <select class="time" onfocus="this.size=3" onblur="this.size=1" onclick="this.size=1" required>
+                      <option value="" disabled selected hidden >*Select Your Time</option>
+                      <option value="1">12pm</option>
+                      <option value="2">12:30pm</option>
+                      <option value="3">1pm</option>
+                      <option value="4">1:30pm</option>
+                      <option value="5">2pm</option>
+                      <option value="6">2:30pm</option>
+                      <option value="7">3pm</option>
+                      <option value="8">3:30pm</option>
+                      <option value="9">4pm</option>
+                      <option value="10">4:30pm</option>
+                      <option value="11">5pm</option>
+                      <option value="12">5:30pm</option>
+                      <option value="13">6pm</option>
+                      <option value="14">6:30pm</option>
+                      <option value="15">7pm</option>
+                      <option value="16">7:30pm</option>
+                      <option value="17">8pm</option>
+                      <option value="18">8:30pm</option>
+                      <option value="19">9pm</option>
+                      <option value="20">9:30pm</option>
+                      <option value="21">10pm</option>
+                  </select>
+
+
+                  <select class="group" onfocus="this.size=3" onblur="this.size=1" onclick="this.size=1" required>
+                      <option value="" disabled selected hidden >*Select Your Group Size</option>
+                      <option value="1">1 Person</option>
+                      <option value="2">2 People</option>
+                      <option value="3">3 People</option>
+                      <option value="4">4 People</option>
+                      <option value="5">5 People</option>
+                      <option value="6">6 People</option>
+                      <option value="7">7 People</option>
+                      <option value="8">8 People</option>
+                      <option value="9">9 People</option>
+                      <option value="10">10+ People</option>
+                  </select>
+
+                  <a id="book-button" href="#">Book</a>
+                </form>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p><a href="https://alexreckard.com" target="_blank"><span class="name">Maki Magic Sushi</span>
+        &copy;Copyright 2022 Alex Reckard
+        alexreckard.com</a></p>
+
+        <div class="footer-nav">
+          <ul>
+            <li><a href="#">Covid</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </footer>
+
+  <script type="text/javascript" src="../js/script.js"></script>
+
+
+  </body>
+</html>
